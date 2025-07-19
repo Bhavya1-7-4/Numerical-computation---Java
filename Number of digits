@@ -1,0 +1,29 @@
+Given an integer, count how many digits it contains.
+Example: 12345 has 5 digits.
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count = 0;
+        if(n == 0){
+            count = 1;
+        } else {
+            while(n != 0){
+            n /= 10;
+            count++;
+        }
+        }
+        
+        System.out.println("No. of digits: " + count);
+}
+}
+
+Input: 1234
+Output: No. of digits: 4
+
+Input: 0
+Output: No. of digits: 1
