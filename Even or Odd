@@ -1,0 +1,27 @@
+Check whether a given number is even or odd.
+
+-->If a number is divisible by 2 (i.e., number % 2 == 0), it’s even.
+-->Otherwise, it’s odd.
+
+Code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println(num + " is Even");
+        } else {
+            System.out.println(num + " is Odd");
+        }
+    }
+}
+
+Input: 4
+Output: 4 is Even
+
+Input: 17
+Output: 17 is Odd
