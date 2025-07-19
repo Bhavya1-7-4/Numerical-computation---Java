@@ -1,0 +1,37 @@
+Prime Number: A prime number is a number greater than 1 that has only two factors: 1 and itself.
+Examples: 2, 3, 5, 7, 11 are prime numbers.
+1, 4, 6, 9 are not prime.
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean isPrime = true;
+        if(n <= 1){
+            isPrime = false;
+        }
+        for(int i=2;i<= Math.sqrt(n);i++){
+            if(n % i == 0){
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime){
+            System.out.println("Prime number");
+        } else {
+            System.out.println("Not a Prime number");
+        }
+}
+}
+
+Input: 29
+Output: Prime number
+
+Input: 12
+Output: Not a Prime number
+
+Input: 1
+Output: Not a Prime number
