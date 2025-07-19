@@ -1,0 +1,41 @@
+Armstrong number : An Armstrong number (also called a narcissistic number) of n digits is a number such that the sum of its digits raised to the power n is equal to the number itself.
+
+For example:
+
+153 → 1³ + 5³ + 3³ = 1 + 125 + 27 = 153
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp;
+        int digits = 0, sum = 0;
+        int t = n;
+        while(t > 0){
+            digits++;  //No. of digits
+            t /= 10;
+        }
+        temp = n;
+        while(temp > 0){
+            int rem = temp%10;
+            sum += Math.pow(rem,digits); //Calculating armstrong number
+            temp /= 10;
+        }
+        if(sum == n){
+            System.out.println("Armstrong number");
+        } else {
+            System.out.println("Not an armstrong number");
+        }
+}
+}
+
+Input: 9474
+Calculation: 9⁴ + 4⁴ + 7⁴ + 4⁴ = 6561 + 256 + 2401 + 256 = 9474
+Output: Armstrong number.
+
+Input: 123
+Output: Not an armstrong number
+
