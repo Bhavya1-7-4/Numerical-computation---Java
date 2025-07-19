@@ -1,0 +1,29 @@
+Fibonacci series: The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1.
+
+Example:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0, b = 1;
+
+        System.out.print("Fibonacci Series: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+}
+}
+
+Input: 5
+Output: Fibonacci Series: 0 1 1 2 3
+
+Input: 7
+Output: Fibonacci Series: 0 1 1 2 3 5 8
