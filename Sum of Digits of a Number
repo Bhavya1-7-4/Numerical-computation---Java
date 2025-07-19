@@ -1,0 +1,24 @@
+Given an integer, calculate the sum of its individual digits.
+Example: For input 123, the sum is 1 + 2 + 3 = 6.
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        while(n > 0){
+            sum += n%10; // Adding last digit to the sum
+            n /= 10; // Removing last digit
+        }
+        System.out.println("Sum of digits: " + sum);
+}
+}
+
+Input: 1234
+Output: Sum of digits: 10
+
+Input: 999
+Output: Sum of digits: 27
