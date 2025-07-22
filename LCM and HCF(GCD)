@@ -1,0 +1,30 @@
+LCM: The LCM of two integers is the smallest number that is evenly divisible by both.
+LCM(a, b) = (a * b) / GCD(a, b)
+
+HCF (GCD): The HCF of two numbers is the largest number that divides both without leaving a remainder.
+We use the Euclidean Algorithm:
+
+If b ≠ 0, then
+GCD(a, b) = GCD(b, a % b)
+
+Code:
+import java.util.Scanner;
+
+public class Main{
+    static int gcd(int a,int b){
+        while(b != 0){
+            int temp = b;
+            b = a%b;
+            a = temp; //GCD calculation
+        }
+        return a;
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int lcm = (a*b)/gcd(a,b); //LCM calculation
+        System.out.println("LCM is: "+lcm+", GCD is: "+gcd(a,b));
+}
+}
